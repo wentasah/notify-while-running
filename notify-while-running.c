@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	notify_notification_show (notification, NULL);
 
 	signal(SIGTERM, sighandler);
+	signal(SIGHUP,  sighandler);
 	signal(SIGINT,  sighandler);
 	pause();
 
